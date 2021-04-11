@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataTableExample
+namespace DataTableExample.Custom
 {
     public static class CustomLINQtoDataSetMethods
     {

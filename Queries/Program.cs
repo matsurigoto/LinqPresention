@@ -20,30 +20,37 @@ namespace Queries
                 new Game { Title = "Html game B", Rating = 6.1f , Year = 2018 }
             };
 
-            //var query = games.Filter(x => x.Year > 2005);
+            //var query = games.Where(x => x.Year > 2005);
 
             //foreach (var game in query)
             //{
             //    Console.WriteLine($"{game.Title}");
             //}
 
-            var query = games.Filter(x => x.Year > 2005)
+
+
+            //------------------ Demo 2 ---------------------
+
+                var query = games.Filter(x => x.Year > 2005)
+                /*.Take(1)*/
                 /*.ToList()*/
                 /*.OrderBy(x => x.Year)*/;
 
-            //Console.WriteLine(query.Count());     
-            var enumerator = query.GetEnumerator();
-            while (enumerator.MoveNext())
-            {
-                Console.WriteLine(enumerator.Current.Title);
-            }
+            //Console.WriteLine(query.Count());
+            
+
+            //var enumerator = query.GetEnumerator();
+            //while (enumerator.MoveNext())
+            //{
+            //    Console.WriteLine(enumerator.Current.Title);
+            //}
 
 
-            var numbers = CustomLinq.Random().Where(n => n > 0.5).Take(10);
-            foreach (var number in numbers)
-            {
-                Console.WriteLine(number);
-            }
+            //var numbers = CustomLinq.Random().Where(n => n > 0.5).Take(10);
+            //foreach (var number in numbers)
+            //{
+            //    Console.WriteLine(number);
+            //}
         }
     }
 }

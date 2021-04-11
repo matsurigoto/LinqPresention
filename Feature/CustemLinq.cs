@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Feature
+namespace Feature.CustemLinq
 {
     public static class CustemLinq
     {
@@ -14,7 +14,7 @@ namespace Feature
             int count = 0;
             foreach (var item in sequence)
             {
-                count+=1;
+                count += 1;
             }
             return count;
         }

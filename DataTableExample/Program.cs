@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//using DataTableExample.Custom;
 
 namespace DataTableExample
 {
@@ -33,15 +34,15 @@ namespace DataTableExample
             }
 
 
-            IEnumerable<DataRow> query =
+            var query =
                 from order in products.AsEnumerable()
                 where order.Field<string>("Category") == "Beverages"
                 select order;
 
-            DataTable orderTable = query.CopyToDataTable();
+            var orderTable = query.CopyToDataTable();
 
-            List<Product> productList = GetProductList();
-            var query2 = productList.Where(x => x.Category == "Beverages").CopyToDataTable();
+            //List<Product> productList = GetProductList();
+            //var query2 = productList.Where(x => x.Category == "Beverages").CopyToDataTable();
         }
 
         public static DataTable CreateProductDataTableList()
